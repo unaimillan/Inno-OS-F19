@@ -1,0 +1,27 @@
+ 1838  pip -V
+ 1839  python -V
+ 1840  ls
+ 1841  ls && ls
+ 1842  ? ls
+ 1843  whoami
+ 1844  ls
+ 1845  cd ~
+ 1846  pwd
+ 1847  mkdir week01
+ 1848  cd week01/
+ 1849  ls /usr/bin | grep gcc
+ 1850  hostname
+ 1851  ls /usr/bin | grep gcc | sort -r
+ 1852  ls /usr/bin | grep gcc | sort -r > ex1.txt
+ 1853  ls
+ 1854  history | tail
+ 1855  history less
+ 1856  history | less
+ 1857  ls -a ~/
+ 1858  vim ~/.bash_history 
+ 1859  die
+ 1860  ls
+ 1861  man die
+ 1862  die
+ 1863  history > ex2.txt
+ 1864  less ex2.txt 
