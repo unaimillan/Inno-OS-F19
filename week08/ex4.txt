@@ -1,0 +1,10 @@
+ru_maxrss: 11080, ru_ixrss: 0, ru_idrss: 0, ru_isrss: 0
+ru_maxrss: 21672, ru_ixrss: 0, ru_idrss: 0, ru_isrss: 0
+ru_maxrss: 31968, ru_ixrss: 0, ru_idrss: 0, ru_isrss: 0
+ru_maxrss: 42264, ru_ixrss: 0, ru_idrss: 0, ru_isrss: 0
+ru_maxrss: 52560, ru_ixrss: 0, ru_idrss: 0, ru_isrss: 0
+ru_maxrss: 62856, ru_ixrss: 0, ru_idrss: 0, ru_isrss: 0
+ru_maxrss: 72888, ru_ixrss: 0, ru_idrss: 0, ru_isrss: 0
+ru_maxrss: 83184, ru_ixrss: 0, ru_idrss: 0, ru_isrss: 0
+ru_maxrss: 93480, ru_ixrss: 0, ru_idrss: 0, ru_isrss: 0
+ru_maxrss: 103776, ru_ixrss: 0, ru_idrss: 0, ru_isrss: 0

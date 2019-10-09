@@ -1,0 +1,4 @@
+8KB = 8192 = 2^13 bytes, so we need 13 bits to address the single byte inside the page.
+Offset will take 13 bits
+Thus, the last 16 - 13 = 3 bits will be used to determine the page =>
+We will have 2^3 = 8 pages and we will need 8 entries in our page table

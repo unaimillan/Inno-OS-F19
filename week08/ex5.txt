@@ -1,0 +1,6 @@
+Physical address is the address of something in real RAM hardware,
+which is installed into the computer (2x8GB, for example) and
+Virtual address is an address of something, what program can access to read or write to.
+Nowadays physical addresses is accessible only by hardware called MMU,
+and not accessible for common user level software,
+so MMU map virtual address used by program into the real one with the use of page table.
