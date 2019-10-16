@@ -1,0 +1,11 @@
+input1.txt - file with test data from Moodle
+inputGood.txt - the same data, but sorted
+inputBad.txt - the same data, but specifically shuffled
+
+To increase hit/miss rate we just need to access the page before it will be removed from the cache.
+E.g. if the cache size is 'N', the page 'i' should be accessed twice in any subsequence of size 'N'
+In my case, sorted data from Moodle
+
+To decrease hit/miss ration we need to access page at any time after it was thrown from cache.
+E.g. if the cache size is 'N', the page 'i' should not be more than 1 time in any subsequence of size 'N'
+In my case, specially constructed data from Moodle

@@ -17,21 +17,15 @@ int hits = 0;
 int misses = 0;
 FILE *inputFile = NULL;
 
-// Lookup through the table and update counters
+// Lookup through the table
 // Returns 1 if page have hit and 0 otherwise
 char lookup(int pageid, page_t table[]) {
-    char success = 0;
-
     for (int i = 0; i < PAGE_AMOUNT; ++i) {
-        table[i].counter >>= 1u;
-
         if (table[i].id == pageid) {
-            table[i].counter |= RBit;
-            success = 1;
+            return 1;
         }
     }
-
-    return success;
+    return 0;
 }
 
 void insert_page(int pageid, page_t table[]) {
@@ -39,7 +33,6 @@ void insert_page(int pageid, page_t table[]) {
     for (int i = 0; i < PAGE_AMOUNT; ++i) {
         if (table[i].id == -1) {
             table[i].id = pageid;
-            table[i].counter = RBit;
             return;
         }
         if (table[i].counter < mcounter) {
@@ -50,7 +43,15 @@ void insert_page(int pageid, page_t table[]) {
 
     assert(mindex != -1);
     table[mindex].id = pageid;
-    table[mindex].counter |= RBit;
+}
+
+void update_ages(int pageid, page_t table[]) {
+    for (int i = 0; i < PAGE_AMOUNT; ++i) {
+        table[i].counter >>= 1u;
+        if (table[i].id == pageid) {
+            table[i].counter |= RBit;
+        }
+    }
 }
 
 // Helper functions
@@ -79,7 +80,7 @@ void print_usage() {
 }
 
 int main(int argc, char *argv[]) {
-    /*
+
     if (argc != 3) {
         print_usage();
         exit(0);
@@ -90,10 +91,9 @@ int main(int argc, char *argv[]) {
     if (PAGE_AMOUNT < 1) {
         printf("Incorrect 'number' specified\nExiting...");
         exit(0);
-    }*/
+    }
 
-    PAGE_AMOUNT = 3;
-    inputFile = fopen("../week09/input4.txt", "r");
+    inputFile = fopen(argv[2], "r");
     if (inputFile == NULL) {
         printf("Failed to open specified 'file'\nExiting...");
         exit(0);
@@ -113,6 +113,7 @@ int main(int argc, char *argv[]) {
             misses++;
             insert_page(ref_index, memtable);
         }
+        update_ages(ref_index, memtable);
     }
 
     printf("%d page frames\n", PAGE_AMOUNT);
