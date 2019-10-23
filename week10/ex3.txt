@@ -1,0 +1,4 @@
+-rw-rw-r-- 1 unaimillan unaimillan 0 Oct 23 13:24 _ex3.txt
+-rw-rw-r-- 1 unaimillan unaimillan 0 Oct 23 13:24 _ex3.txt
+-rwxrw-rwx 1 unaimillan unaimillan 0 Oct 23 13:24 _ex3.txt
+-rwxrwxrwx 1 unaimillan unaimillan 0 Oct 23 13:24 _ex3.txt

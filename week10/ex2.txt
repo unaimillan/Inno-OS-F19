@@ -1,0 +1,10 @@
+# I've run: "ls -i _ex2.txt" and got:
+1966157 _ex2.txt
+
+# I've run: find .. -inum 1966157" and got:
+../week10/_ex2.txt
+../week01/file.txt
+
+# I've run: "find .. -inum 1966157 -exec rm {} \;" and got:
+
+# I've run: "find .. -inum 1966157" and got:
