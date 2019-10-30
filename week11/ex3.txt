@@ -1,0 +1,12 @@
+From manuals:
+The 'stdout' stream is line-buffered when it points to a terminal.
+Partial lines will not appear until fflush(3) or exit(3) is called, or a newline is printed.
+
+Program 1: first prtinf("Hello") puts "Hello" into the internal buffer and does not flush it.
+Then fork() creates an exact copy of the process, with this word in its buffer.
+Then both processes printf("\n") which causes flushing buffers of each of the two processes,
+so we see two words "Hello" in terminal.
+
+Program 2: first printf("Hello\n") puts "Hello" into the internal buffer and immediately prints it,
+and the buffer is cleaned correspondingly. Then fork() creates an exact copy of the process.
+Then both processes printf("\n"), so we see "Hello\n" and 2 extra newline characters in the terminal.
